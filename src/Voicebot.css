@@ -1,0 +1,54 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7f6;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .voicebot-container {
+    text-align: center;
+    background-color: #181515;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  .voicebot-circle {
+    margin: 0 auto;
+    width: 100px; /* Adjust to match the SVG's aspect ratio */
+    height: 100px; /* Adjust to match the SVG's aspect ratio */
+    margin-bottom: 20px;
+    
+  }
+  
+  .transcript,
+  .bot-response {
+    background-color: #e8eef1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    word-wrap: break-word;
+  }
+  
+  .voice-input-button {
+    background-color: #5e97f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .voice-input-button:hover {
+    background-color: #4a85cb;
+  }
+  
+  audio {
+    display: none;
+  }
