@@ -4,12 +4,11 @@ import "./Voicebot.css";
 import RimeSpeechTechLogo from './RimeSpeechTech_Logo.2582e20f.svg';
 const openai = new OpenAI(
     {
-        apiKey: "API_KEY",
+        apiKey: process.env.REACT_APP_OPEN_AI_API_KEY,
         dangerouslyAllowBrowser: true,
     }
 );
 
-console.log("openai", process.env);
 
 const Voicebot = () => {
   const [transcript, setTranscript] = useState("");
@@ -89,7 +88,7 @@ const Voicebot = () => {
         method: "POST",
         headers: {
           Accept: "application/json",
-          Authorization: "Bearer API_KEY",
+          Authorization: "Bearer " + process.env.REACT_APP_RIME_API_KEY,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
